@@ -28,6 +28,7 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.9.0-M1'
 }
 
 test {
