@@ -38,6 +38,9 @@ jobs:
       with:
         name: test-result-junit
         path: <test-results>
+        
+    - name: Thundra Gradle Test Instrumentation
+      uses: thundra-io/thundra-gradle-test-action@v1.0.4
 
     - name: Build with Gradle
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
