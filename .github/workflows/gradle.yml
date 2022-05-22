@@ -42,3 +42,8 @@ jobs:
   # You may pin to the exact commit or the version.
   # uses: thundra-io/thundra-gradle-test-action@51f3010b4e57b6027dd8d28ecc474153edc03c8c
       uses: thundra-io/thundra-gradle-test-action@v1.0.4
+      with:
+    # Thundra's API Key
+        apikey: 43951403-19f7-45cb-bbcc-b042918f9271
+    # Thundra's Test Project ID
+        project_id: 6abee2f4-e4fb-46ad-ad3e-48b41a97a094
