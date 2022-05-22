@@ -48,3 +48,9 @@ jobs:
     # Thundra's Test Project ID
         project_id: 6abee2f4-e4fb-46ad-ad3e-48b41a97a094
         command: ./gradlew build
+        
+    - name: Foresight Test Report Uploader
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-result-junit
+        path: target
