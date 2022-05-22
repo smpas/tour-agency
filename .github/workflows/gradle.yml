@@ -38,8 +38,7 @@ jobs:
       with:
         arguments: build
         
-    - name: Publish Unit Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v1.36
-      if: always()
-      with:
-        files: "test-results/*.xml"
+    - name: Thundra Gradle Test Instrumentation
+  # You may pin to the exact commit or the version.
+  # uses: thundra-io/thundra-gradle-test-action@51f3010b4e57b6027dd8d28ecc474153edc03c8c
+      uses: thundra-io/thundra-gradle-test-action@v1.0.4
