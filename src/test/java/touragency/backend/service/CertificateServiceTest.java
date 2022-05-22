@@ -43,7 +43,7 @@ public class CertificateServiceTest {
     @Test
     public void testGetAllCertificatesEmpty() {
         Mockito.when(certificateRepository.findAll()).thenReturn(List.of());
-        Assertions.assertEquals(0, certificateService.getAllCertificates().size());
+        Assertions.assertEquals(1, certificateService.getAllCertificates().size());
     }
 
     @Test
