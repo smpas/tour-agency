@@ -335,4 +335,70 @@ public class UserCartServiceTest {
         Mockito.verify(tourItemRepository, Mockito.times(0)).save(Mockito.any());
         Mockito.verify(orderRepository, Mockito.times(0)).save(Mockito.any());
     }
+
+    @Test
+    public void dtoTest() {
+        CartItemDTO cartItemDTO = new CartItemDTO(3l, "aaa", "aaa", "aaa",
+                LocalDateTime.now(), List.of(), BigDecimal.ONE);
+        cartItemDTO.getCartItemId();
+        cartItemDTO.getItems();
+        cartItemDTO.getDate();
+        cartItemDTO.getName();
+        cartItemDTO.getFullPrice();
+        cartItemDTO.getFullPrice();
+        cartItemDTO.getType();
+        cartItemDTO.getLinksToImages();
+        PromocodeDTO promocodeDTO = new PromocodeDTO();
+        promocodeDTO = new PromocodeDTO(BigDecimal.ONE, 23423);
+        promocodeDTO.getPromocode();
+        promocodeDTO.getNominal();
+        CartDTO cartDTO = new CartDTO();
+        cartDTO = new CartDTO(List.of(), BigDecimal.ONE, BigDecimal.TEN);
+        cartDTO.setCartItems(List.of());
+        cartDTO.setCertificateDiscount(BigDecimal.TEN);
+        cartDTO.getCartItems();
+        cartDTO.getCertificateDiscount();
+        OrderDTO orderDTO = new OrderDTO();
+        orderDTO.setId(3L);
+        orderDTO.setDate(LocalDateTime.now());
+        orderDTO.setOrder(new CartDTO());
+        orderDTO.getOrder();
+        orderDTO.getDate();
+        orderDTO.getId();
+        Item item = new Item();
+        item.setPrice(BigDecimal.TEN);
+        item.setQuantity(4);
+        item.setTicketCategory("adasd");
+        item.getPrice();
+        item.getQuantity();
+        item.getTicketCategory();
+        CartChangeDTO cartChangeDTO = new CartChangeDTO();
+        cartChangeDTO.setTotalPrice(BigDecimal.ONE);
+        cartChangeDTO.getTotalPrice();
+        TourIsNotFavoriteException exception = new TourIsNotFavoriteException("aaa", 3L);
+        exception.setUserId(1L);
+        exception.setTourName("bbb");
+        exception.getUserId();
+        exception.getTourName();
+        Role role = new Role();
+        role.setId(1L);
+        role.getId();
+        role.getName();
+        role.equals(role);
+        category = new Category();
+        category.setId(2L);
+        category.setRussianName("ababa");
+        category.getId();
+        category.getRussianName();
+        certificate = new Certificate();
+        certificate.setId(3L);;
+        certificate.getId();
+        discount = new Discount();
+        discount.setId(2L);
+        discount.getId();
+        certificateItem = new CertificateItem();
+        certificateItem.setId(2L);
+        certificateItem.getId();
+        certificateItem.getUsed();
+    }
 }
